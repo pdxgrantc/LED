@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
 
+const lib = require("./database/config.js");
+const LEDConfig = new lib.Config();
+
 const app = express();
 const port = process.env.PORT || 8080;
 
