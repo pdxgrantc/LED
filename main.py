@@ -28,10 +28,10 @@ class Data:
         print(self.blue)
 
 def main():
-    data = Data
+    color = Data
 
     #data.readColors()
-    data.display()
+    color.display()
 
     while True:
         pass
