@@ -60,12 +60,13 @@ select::-ms-expand {
   
 .selectdiv:after {
     content: '>';
+    font-size: 45px;
     color: var(--white-color);
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    right: 11px;
+    right: 35px;
     /*Adjust for position however you want*/
     
     top: 18px;
@@ -87,16 +88,30 @@ select::-ms-expand {
     display: block;
     width: 100%;
     max-width: 1400px;
-    height: 50px;
     float: right;
     margin: 1% 0px;
-    padding: 0px 24px;
+    padding: 10px 24px;
     font-size: 16px;
-    line-height: 1.75;
     color: var(--white-color);
     background-color: var(--accent-color);
     background-image: none;
     border: 3px solid var(--white-color);
     -ms-word-break: normal;
     word-break: normal;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+input {
+    appearance: none;
+    border: 3px solid var(--white-color);
+    background-color: var(--accent-color);
+    padding: 15px 20px;
+    font-size: 35px;
+    color: var(--white-color);
+    font-weight: 600;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 2%;
+    width: 50%;
 }
