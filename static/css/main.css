@@ -72,21 +72,36 @@ body {
     margin-top: 35px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
+
+@media (max-width: 1000px) {
+    .optionContainer {
+       justify-content: center;
+    }
+ }
 
 .option {
     position: relative;
     border: 3px solid black;
     background-color: var(--accent-color);
     border-radius: var(--border-rad);
-    width: 47%;
-    height: 35vh;
+    width: 30%;
+    height: 20vw;
     min-width: 250px;
-    max-width: 355px;
     margin-bottom: 4vh;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
 }
+
+@media (max-width: 1000px) {
+    .option {
+       margin-left: 1vh;
+       margin-right: 1vh;
+       margin-bottom: 1.75vh;
+    }
+ }
 
 .optionTextContainer {
     position: absolute;
