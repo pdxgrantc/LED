@@ -1,9 +1,6 @@
 import os
 import json
 
-
-# Opening JSON file
-
 class Data:
     def __init__(self):
         workDir = os.getcwd()
@@ -34,5 +31,4 @@ def main():
         data.display()
 
 if __name__=='__main__':
-    pass
     main()
