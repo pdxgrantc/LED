@@ -16,6 +16,29 @@
                     <div class="containerHeader">
                         <h2>Colors</h2>
                     </div>
+
+                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                    <script type="text/javascript">
+                        $(function() {
+                            $('a#test').on('click', function(e) {
+                                e.preventDefault()
+                                $.getJSON('/background_process_test',
+                                    function(data) {
+                                    // do nothing
+                                });
+                                return false;
+                            });
+                        });
+                    </script>
+
+
+                    <div class="container">
+                        <h3>Test</h3>
+                        <form action="">
+                            <a href=# id=test><button class="btn btn-default">TEST</button></a>
+                        </form>
+                    </div>
+
                     <div class="optionContainer">
                         <div class="option" id="redColor">
                             <div class="optionTextContainer">
