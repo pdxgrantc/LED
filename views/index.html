@@ -4,94 +4,47 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
     <div id="pageContainer">
         <div id="headerContents">
             <h1>
                 LED Control
             </h1>
         </div>
-        
-        <form id="color-red" method="POST" action="/">
-            <select id="color" name="color">
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-                <option value="purple">Purple</option>
-                <option value="blue">Blue</option>
-                <option value="pink">Pink</option>
-                <option value="teal">Teal</option>
-            </select>
-            <input type="submit">
-        </form>
-        
-
         <div id="pageContents">
-            <div id="ledOptions">
-                <div id="colors" class="optionBox">
-                    <div class="containerHeader">
-                        <h2>Colors</h2>
-                    </div>
-                    <div class="optionContainer">
-                        <a href="#" onclick="callRed()">
-                            <div class="option" id="redColor">
-                                <div class="optionTextContainer">
-                                    <h3>Red</h3>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="option" id="blueColor">
-                            <div class="optionTextContainer">
-                                <h3>Blue</h3>
-                            </div>
-                        </div>
-                        <div class="option"id="greenColor">
-                            <div class="optionTextContainer">
-                                <h3>Green</h3>
-                            </div>
-                        </div>
-                        <div class="option" id="pinkColor">
-                            <div class="optionTextContainer">
-                                <h3>Pink</h3>
-                            </div>
-                        </div>
-                        <div class="option" id="purpleColor">
-                            <div class="optionTextContainer">
-                                <h3>Purple</h3>
-                            </div>
-                        </div>
-                        <div class="option" id="tealColor">
-                            <div class="optionTextContainer">
-                                <h3>Teal</h3>
-                            </div>
-                        </div>
-                    </div>
+            <form id="ledInput" method="POST" action="/">
+                    
+                
+
+                <div class="selectdiv">
+                    <label>
+                        <select name="color">
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>                            
+                            <option value="purple">Purple</option>
+                            <option value="blue">Blue</option>
+                            <option value="pink">Pink</option>
+                            <option value="teal">Teal</option>                                
+                            <option value="random">Teal</option>
+                        </select>
+                    </label>
                 </div>
-                <div id="modes" class="optionBox">
-                    <div class="containerHeader">
-                        <h2>Modes</h2>
-                    </div>
-                    <div class="optionContainer">
-                        <div class="option">
-
-                        </div>
-                        <div class="option">
-
-                        </div>
-                        <div class="option">
-
-                        </div>
-                        <div class="option">
-
-                        </div>
-                        <div class="option">
-
-                        </div>
-                        <div class="option">
-
-                        </div>
-                    </div>
+                <div class="selectdiv">
+                    <select name="mode">
+                        <option value="red">Solid</option>
+                        <option value="blue">Flashing</option>
+                        <option value="green">Strobe</option>                            
+                        <option value="purple">Breathing</option>
+                        <option value="blue">Rainbow</option>
+                    </select>
                 </div>
-            </div>
+                <input id="submit" type="submit">
+            </form>
         </div>
     </div>
 </body>
