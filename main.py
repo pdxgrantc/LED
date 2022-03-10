@@ -5,12 +5,12 @@ import json
 # Opening JSON file
 
 class Data:
-  def __init__(self):
-    workDir = os.getcwd()
-    self.path = workDir + "/database/data/color.json"
-    self.red = 0
-    self.green = 0
-    self.blue = 0
+    def __init__(self):
+        workDir = os.getcwd()
+        self.path = workDir + "/database/data/color.json"
+        self.red = 0
+        self.green = 0
+        self.blue = 0
 
     def readColors(self):
         with open(self.path, 'r') as myfile:
@@ -28,13 +28,11 @@ class Data:
         print(self.blue)
 
 def main():
-    color = Data
-
-    #data.readColors()
-    color.display()
-
+    data = Data()
     while True:
-        pass
+        data.readColors()
+        data.display()
 
 if __name__=='__main__':
+    pass
     main()
