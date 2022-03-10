@@ -27,8 +27,6 @@ class Data:
         print(self.green)
         print(self.blue)
 
-
-
 def main():
     data = Data
 
