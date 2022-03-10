@@ -10,41 +10,35 @@
                 LED Control
             </h1>
         </div>
+        
+        <form id="color-red" method="POST" action="/">
+            <select id="color" name="color">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+                <option value="blue">Blue</option>
+                <option value="pink">Pink</option>
+                <option value="teal">Teal</option>
+            </select>
+            <input type="submit">
+        </form>
+        
+
         <div id="pageContents">
             <div id="ledOptions">
                 <div id="colors" class="optionBox">
                     <div class="containerHeader">
                         <h2>Colors</h2>
                     </div>
-
-                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-                    <script type="text/javascript">
-                        $(function() {
-                            $('a#test').on('click', function(e) {
-                                e.preventDefault()
-                                $.getJSON('/background_process_test',
-                                    function(data) {
-                                    // do nothing
-                                });
-                                return false;
-                            });
-                        });
-                    </script>
-
-
-                    <div class="container">
-                        <h3>Test</h3>
-                        <form action="">
-                            <a href=# id=test><button class="btn btn-default">TEST</button></a>
-                        </form>
-                    </div>
-
                     <div class="optionContainer">
-                        <div class="option" id="redColor">
-                            <div class="optionTextContainer">
-                                <h3>Red</h3>
+                        <a href="#" onclick="callRed()">
+                            <div class="option" id="redColor">
+                                <div class="optionTextContainer">
+                                    <h3>Red</h3>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                         <div class="option" id="blueColor">
                             <div class="optionTextContainer">
                                 <h3>Blue</h3>
