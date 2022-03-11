@@ -1,5 +1,6 @@
 import os
-import jsonnod
+import json
+import math
 
 class Data:
     def __init__(self):
@@ -23,6 +24,13 @@ class Data:
         print(self.red)
         print(self.green)
         print(self.blue)
+
+    def rainbow():
+        for x in range(255):
+            red = (math.sin(x) + 1) * 128 - 1
+            green = (math.sin(x + ((2 * math.pi) / 3)) + 1) * 128 - 1
+            blue = (math.sin(x + ((4 * math.pi) / 3)) + 1) * 128 - 1
+
 
 def main():
     data = Data()
