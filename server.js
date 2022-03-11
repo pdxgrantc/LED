@@ -20,6 +20,7 @@ app.get('/', function(req, res) {
 
 app.post('/', urlencodedParser, function(req, res) {
   var response = req.body;
+  // Color
   if (response.color == "red") {
     LEDConfig.makeColorConfig(255, 0, 0);
   }
@@ -37,6 +38,26 @@ app.post('/', urlencodedParser, function(req, res) {
   }
   else if (response.color == "teal") {
     LEDConfig.makeColorConfig(0,128,128);
+  }
+  else if (response.color == "rainbow") {
+    LEDConfig.makeColorConfig(-1,-1,-1);
+  }
+  else if (response.color == "off") {
+    LEDConfig.makeColorConfig(0,0,0);
+  }
+
+  // Mode
+  if (response.color == "solid") {
+    LEDConfig.makeModeConfig(0);
+  }
+  else if (response.color == "flashing") {
+    LEDConfig.makeModeConfig(1);
+  }
+  else if (response.color == "strobe") {
+    LEDConfig.makeModeConfig(2);
+  }
+  else if (response.color == "breathing") {
+    LEDConfig.makeModeConfig(3);
   }
 
   res.sendFile(path.join(__dirname, 'views/index.html'));
